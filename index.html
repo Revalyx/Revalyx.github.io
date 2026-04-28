@@ -1,84 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emilio Reyes | Fullstack Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <canvas id="canvas-bg"></canvas>
-
-    <div class="glass-nav">
-        <div class="nav-content">
-            <span class="logo">REVA<span class="dot">LYX</span></span>
-            <div class="nav-links">
-                <a href="#about">Bio</a>
-                <a href="#skills">Stack</a>
-                <a href="#projects">Proyectos</a>
-                <a href="#education">Formación</a>
-            </div>
-        </div>
+<section id="hero" class="bento-item profile-card reveal">
+    <div class="badge-online">Disponible para nuevos retos</div>
+    <h1>Emilio Reyes <span class="wave">👋</span></h1>
+    <p class="description">Técnico Superior en <strong>DAM</strong>. Construyendo el futuro con código limpio y eficiente.</p>
+    
+    <div class="badges-languages">
+        <span class="lang-badge"><i class="fab fa-kotlin"></i> Kotlin</span>
+        <span class="lang-badge"><i class="fas fa-hashtag"></i> C# / Unity</span>
+        <span class="lang-badge"><i class="fab fa-laravel"></i> Laravel / PHP</span>
     </div>
 
-    <main class="bento-container">
-        <section id="about" class="bento-item profile-card reveal">
-            <div class="badge-online">Disponible para proyectos</div>
-            <h1>Emilio Reyes <span class="wave">👋</span></h1>
-            <p class="description">Técnico Superior en <strong>DAM</strong>. Especialista en forjar soluciones robustas con <span>Kotlin</span>, <span>Laravel</span> y experiencias interactivas en <span>Unity</span>.</p>
-            <div class="social-pills">
-                <a href="https://github.com/Revalyx" class="pill"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/emilioreyesvaquero" class="pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </section>
+    <div class="social-pills">
+        <a href="https://github.com/Revalyx" class="pill"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/emilioreyesvaquero" class="pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+</section>
 
-        <section id="skills" class="bento-item skills-card reveal">
-            <h3>Tech Stack</h3>
-            <div class="skill-tags">
-                <span class="tag"><i class="fab fa-kotlin"></i> Kotlin</span>
-                <span class="tag"><i class="fab fa-php"></i> Laravel</span>
-                <span class="tag"><i class="fab fa-unity"></i> Unity C#</span>
-                <span class="tag"><i class="fas fa-database"></i> MySQL</span>
-                <span class="tag"><i class="fab fa-docker"></i> Docker</span>
-                <span class="tag"><i class="fab fa-android"></i> Android SDK</span>
+<section id="projects" class="bento-item projects-grid reveal">
+    <h3 class="grid-title">Proyectos Destacados</h3>
+    <div class="inner-grid">
+        <div class="project-item-advanced">
+            <div class="project-header">
+                <div class="project-icon kotlin-bg"><i class="fab fa-android"></i></div>
+                <span class="project-status">Mobile</span>
             </div>
-        </section>
-
-        <section id="projects" class="bento-item projects-grid reveal">
-            <h3>Proyectos Destacados</h3>
-            <div class="inner-grid">
-                <div class="p-item">
-                    <h4>Agora</h4>
-                    <p>App nativa Android con arquitectura MVVM.</p>
-                    <a href="https://github.com/Revalyx/agora">Repo <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="p-item">
-                    <h4>AplicacionPPS</h4>
-                    <p>API REST robusta escalable.</p>
-                    <a href="https://github.com/Revalyx/AplicacionPPS">Repo <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <h4>Agora</h4>
+            <p>Arquitectura MVVM y Clean Code para una experiencia nativa fluida.</p>
+            <div class="project-techstack">
+                <span>Kotlin</span>
+                <span>Jetpack Compose</span>
             </div>
-        </section>
+            <a href="https://github.com/Revalyx/agora" class="project-link">Ver Repositorio <i class="fas fa-external-link-alt"></i></a>
+        </div>
 
-        <section id="education" class="bento-item education-card reveal">
-            <h3>Formación</h3>
-            <div class="timeline">
-                <div class="edu-item">
-                    <span class="year">2024 - Actual</span>
-                    <h4>Especialización Fullstack</h4>
-                    <p>Profundizando en arquitecturas limpias y microservicios.</p>
-                </div>
-                <div class="edu-item">
-                    <span class="year">2022 - 2024</span>
-                    <h4>T.S. Desarrollo de Aplicaciones Multiplataforma</h4>
-                    <p>I.E.S. (Tu Centro) - Especialidad en Mobile & Backend.</p>
-                </div>
+        <div class="project-item-advanced">
+            <div class="project-header">
+                <div class="project-icon php-bg"><i class="fas fa-server"></i></div>
+                <span class="project-status">Backend</span>
             </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <h4>AplicacionPPS</h4>
+            <p>API REST robusta diseñada para alta disponibilidad y escalabilidad.</p>
+            <div class="project-techstack">
+                <span>PHP</span>
+                <span>Laravel</span>
+                <span>MySQL</span>
+            </div>
+            <a href="https://github.com/Revalyx/AplicacionPPS" class="project-link">Ver Repositorio <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+</section>
