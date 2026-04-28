@@ -148,3 +148,18 @@ h1 { font-size: 3rem; letter-spacing: -1.5px; margin-bottom: 10px; line-height: 
     .profile-card, .tech-card, .projects-grid, .education-card, .contact-mini { grid-column: span 1; }
     h1 { font-size: 2.2rem; }
 }
+
+.project-anchor {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit;        /* Hereda el color del texto del padre (blanco/gris) */
+    display: flex;         /* Mantiene la alineación flex de la card */
+    align-items: center;
+    gap: 15px;
+    width: 100%;           /* Ocupa todo el ancho de la p-card */
+    height: 100%;          /* Ocupa todo el alto */
+}
+
+/* Opcional: un toque de feedback visual al pasar el ratón por encima del enlace */
+.p-card:active {
+    transform: scale(0.98); /* Pequeño efecto de pulsación al hacer clic */
+}
