@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emilio Reyes | Portfolio Pro</title>
+    <title>Emilio Reyes | Cybersecurity & Fullstack Dev</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -11,92 +11,76 @@
 <body>
     <canvas id="canvas-bg"></canvas>
 
-    <div class="glass-nav">
+    <nav class="glass-nav">
         <div class="nav-content">
             <span class="logo">REVA<span class="dot">LYX</span></span>
             <div class="nav-links">
                 <a href="#about">Bio</a>
                 <a href="#projects">Proyectos</a>
-                <a href="#tech">Stack</a>
                 <a href="#education">Formación</a>
             </div>
         </div>
-    </div>
+    </nav>
 
     <main class="bento-container">
         <section id="about" class="bento-item profile-card reveal">
             <div class="card-header">
-                <div class="status-pill"><span class="live-dot"></span> Disponible para proyectos</div>
+                <div class="status-pill"><span class="live-dot"></span> Disponible</div>
                 <div id="local-time" class="time-pill">00:00:00</div>
             </div>
             <h1>Emilio Reyes <span class="wave">👋</span></h1>
-            <p class="hero-text">Técnico Superior <strong>DAM</strong>. Transformo ideas complejas en aplicaciones nativas fluidas y arquitecturas backend escalables.</p>
+            <p class="hero-text">Técnico Superior <strong>DAM</strong> y Especialista en <strong>Ciberseguridad</strong>. Forjando software seguro y escalable.</p>
             <div class="social-pills">
                 <a href="https://github.com/Revalyx" target="_blank" class="pill-btn"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://www.linkedin.com/in/emilioreyesvaquero" target="_blank" class="pill-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </section>
 
-        <section id="tech" class="bento-item tech-card reveal">
-            <h3>Core Stack</h3>
+        <section class="bento-item tech-card reveal">
+            <h3>Stack</h3>
             <div class="tech-groups">
                 <div class="t-group">
-                    <span class="t-label">Mobile</span>
-                    <div class="t-icons"><i class="fab fa-kotlin"></i> <i class="fab fa-android"></i> <i class="fab fa-unity"></i></div>
+                    <span class="t-label">Mobile & Games</span>
+                    <div class="t-icons"><i class="fab fa-kotlin"></i> <i class="fab fa-unity"></i> <i class="fab fa-android"></i></div>
                 </div>
                 <div class="t-group">
-                    <span class="t-label">Backend</span>
-                    <div class="t-icons"><i class="fab fa-php"></i> <i class="fab fa-laravel"></i> <i class="fas fa-database"></i></div>
-                </div>
-                <div class="t-group">
-                    <span class="t-label">Tools</span>
-                    <div class="t-icons"><i class="fab fa-git-alt"></i> <i class="fab fa-docker"></i> <i class="fas fa-terminal"></i></div>
+                    <span class="t-label">Backend & Security</span>
+                    <div class="t-icons"><i class="fab fa-php"></i> <i class="fab fa-laravel"></i> <i class="fas fa-shield-alt"></i></div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="bento-item projects-grid reveal">
-            <h3 class="section-title">Mis Proyectos</h3>
+            <h3 class="section-title">Proyectos Destacados</h3>
             <div class="inner-grid">
-                <div class="p-card">
+                <a href="https://github.com/Revalyx/agora" target="_blank" class="p-card">
                     <div class="p-icon kotlin-glow"><i class="fab fa-android"></i></div>
                     <div class="p-info">
                         <h4>Agora</h4>
-                        <p>Aplicación móvil que facilita el debate de libros ante la dificultad para reunirse físicamente.</p>
+                        <p>Arquitectura limpia MVVM nativa.</p>
                         <span class="p-tag">Kotlin</span>
-                        <span class="p-tag">Jetpack Compose</span>
-
                     </div>
-                </div>
-                <div class="p-card">
+                </a>
+
+                <a href="TU_LINK_AQUI" target="_blank" class="p-card">
+                    <div class="p-icon js-glow"><i class="fas fa-gamepad"></i></div>
+                    <div class="p-info">
+                        <h4>Impostor Game</h4>
+                        <p>Juego WebSockets en tiempo real.</p>
+                        <div class="tags-row">
+                            <span class="p-tag">JS</span> <span class="p-tag">Socket.io</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Revalyx/AplicacionPPS" target="_blank" class="p-card">
                     <div class="p-icon php-glow"><i class="fas fa-server"></i></div>
                     <div class="p-info">
                         <h4>AplicacionPPS</h4>
-                        <p>Gestión de datos sensibles, manejo de medidas de seguridad.</p>
-                        <span class="p-tag">Python</span>
-                        <span class="p-tag">Flask</span>
+                        <p>API robusta de gestión de datos.</p>
+                        <span class="p-tag">Laravel</span>
                     </div>
-                </div>
-                <div class="p-card">
-                    <a href="https://tu-enlace-del-juego.com" target="_blank" class="project-anchor">
-                        <div class="p-icon php-glow"><i class="fas fa-server"></i></div>
-                        <div class="p-info">
-                            <h4>Impostor Game</h4>
-                            <p>Juego WEB viral creado utilizando WebSockets</p>
-                            <span class="p-tag">HTML</span>
-                            <span class="p-tag">CSS</span>
-                            <span class="p-tag">JavaScript</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-card">
-                    <div class="p-icon unity-glow"><i class="fab fa-unity"></i></div>
-                    <div class="p-info">
-                        <h4>Game Dev</h4>
-                        <p>Lógica interactiva C#.</p>
-                        <span class="p-tag">Unity</span>
-                    </div>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -106,27 +90,26 @@
                 <div class="tl-item active">
                     <div class="tl-dot"></div>
                     <span class="tl-date">2025 - 2026</span>
-                    <p class="tl-title">Curso de especialización en Ciberseguridad - IES ZAIDIN VERGELES -</p>
-                    <p class="tl-desc">Especialista en Ciberseguridad por la vía reglada (Máster de FP). Capacitado para implementar estrategias de defensa activa, realizar análisis forenses y asegurar infraestructuras críticas mediante técnicas de hacking ético y gestión de riesgos.</p>
+                    <p class="tl-title">Ciberseguridad - IES Zaidín Vergeles</p>
+                    <p class="tl-desc">Especialización en hacking ético, análisis forense y defensa activa.</p>
                 </div>
                 <div class="tl-item">
                     <div class="tl-dot"></div>
                     <span class="tl-date">2023 - 2025</span>
-                    <p class="tl-title">Grado Superior En Desarrollo de Aplicaciones Multiplataforma</p>
-                    <p class="tl-desc">Formación especializada en el ciclo de vida completo del software, desde el diseño de interfaces hasta la gestión de bases de datos y la implementación de sistemas ERP. Experiencia práctica en lenguajes como Java, Kotlin o C# y desarrollo de soluciones seguras para entornos móviles y de escritorio.</p>
+                    <p class="tl-title">Grado Superior DAM</p>
+                    <p class="tl-desc">Desarrollo multiplataforma y gestión de sistemas ERP.</p>
                 </div>
             </div>
         </section>
 
         <section class="bento-item contact-mini reveal">
-            <h3>Hablemos</h3>
-            <p>¿Tienes un proyecto en mente?</p>
-            <a href="mailto:emilio@ejemplo.com" class="contact-link">Enviar Mail <i class="fas fa-paper-plane"></i></a>
+            <h3>¿Hablamos?</h3>
+            <a href="mailto:tu-email@ejemplo.com" class="contact-link">Enviar Mail <i class="fas fa-paper-plane"></i></a>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2026 Emilio Reyes • Built with precision</p>
+        <p>&copy; 2026 Emilio Reyes • Granada, España</p>
     </footer>
 
     <script src="script.js"></script>
