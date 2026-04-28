@@ -3,58 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emilio Reyes (Revalyx) | Fullstack Developer</title>
+    <title>Emilio Reyes - Revalyx | Fullstack DAM Developer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+
+    <canvas id="matrix-bg"></canvas>
+
+    <header class="neu-header">
         <nav>
-            <div class="logo">Revalyx</div>
+            <div class="logo">Reva<span class="highlight">lyx</span></div>
             <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about"><i class="fas fa-user-code"></i></a></li>
+                <li><a href="#projects"><i class="fas fa-layer-group"></i></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <h1>Hola, soy Emilio 👋</h1>
-        <p>Fullstack Developer | Especializado en DAM</p>
-        <div class="badges">
-            <span>Kotlin</span> <span>Android</span> <span>Unity</span> <span>Laravel</span>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Soy Técnico Superior en Desarrollo de Aplicaciones Multiplataforma. Me apasiona construir soluciones móviles con Kotlin, experiencias interactivas en Unity y backends robustos con Laravel.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Proyectos Destacados</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>AplicacionPPS</h3>
-                <p>Desarrollo backend utilizando PHP.</p>
-                <a href="https://github.com/Revalyx/AplicacionPPS" target="_blank">Ver código</a>
+    <main class="container">
+        <section id="hero" class="neu-card reveal">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Hola, soy Emilio">Hola, soy Emilio</h1>
+                <p class="subtitle">Fullstack DAM Developer | Kotlin • Unity • Laravel</p>
+                <div class="badges">
+                    <span class="badge neu-inset">Android</span>
+                    <span class="badge neu-inset">Game Dev</span>
+                    <span class="badge neu-inset">APIs REST</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Revalyx" target="_blank" class="neu-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/emilioreyesvaquero" target="_blank" class="neu-btn"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Agora</h3>
-                <p>Aplicación móvil desarrollada en Kotlin.</p>
-                <a href="https://github.com/Revalyx/agora" target="_blank">Ver código</a>
-            </div>
-            <div class="project-card">
-                <h3>Impostor Game</h3>
-                <p>Juego desarrollado en JavaScript.</p>
-                <a href="https://github.com/Revalyx/impostor-game" target="_blank">Jugar / Ver Repo</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>© 2026 Emilio Reyes Vaquero - <a href="mailto:emilio93erv@gmail.com">Contacto</a></p>
+        <section id="projects">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="project-grid">
+                <div class="project-card neu-card reveal">
+                    <div class="icon-box neu-inset">
+                        <i class="fas fa-database php-icon"></i>
+                    </div>
+                    <h3>AplicacionPPS</h3>
+                    <p>Potente backend PHP enfocado en la gestión eficiente de datos.</p>
+                    <div class="tags">
+                        <span>PHP</span> <span>Backend</span>
+                    </div>
+                    <a href="https://github.com/Revalyx/AplicacionPPS" target="_blank" class="neu-btn-sm">Código <i class="fas fa-code"></i></a>
+                </div>
+
+                <div class="project-card neu-card reveal">
+                    <div class="icon-box neu-inset">
+                        <i class="fab fa-android kotlin-icon"></i>
+                    </div>
+                    <h3>Agora Mobile</h3>
+                    <p>Experiencia nativa Android con Kotlin. Interfaz fluida y limpia.</p>
+                    <div class="tags">
+                        <span>Kotlin</span> <span>Android</span>
+                    </div>
+                    <a href="https://github.com/Revalyx/agora" target="_blank" class="neu-btn-sm">Código <i class="fas fa-code"></i></a>
+                </div>
+
+                <div class="project-card neu-card reveal">
+                    <div class="icon-box neu-inset">
+                        <i class="fas fa-gamepad unity-icon"></i>
+                    </div>
+                    <h3>Impostor Game</h3>
+                    <p>Experimento interactivo en JS. Lógica de juego y físicas.</p>
+                    <div class="tags">
+                        <span>JS</span> <span>Game Dev</span>
+                    </div>
+                    <a href="https://github.com/Revalyx/impostor-game" target="_blank" class="neu-btn-sm">Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="neu-footer">
+        <p>Built with <i class="fas fa-heart"></i> by Emilio Reyes | 2026</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
