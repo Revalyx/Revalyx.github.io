@@ -1,60 +1,64 @@
+// --- FONDO ANIMADO ---
 const canvas = document.getElementById('canvas-bg');
 const ctx = canvas.getContext('2d');
+let w, h, particles = [];
 
-let width, height, mouseX = 0, mouseY = 0;
-let blobs = [];
-
-function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', resize);
-resize();
-
-window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-
-class Blob {
-    constructor() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.size = Math.random() * 250 + 250;
-        this.baseX = this.x;
-        this.baseY = this.y;
-        this.speed = Math.random() * 0.02 + 0.01;
-        this.color = Math.random() > 0.5 ? '#38bdf8' : '#7f52ff';
+function initCanvas() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    particles = [];
+    for (let i = 0; i < 5; i++) {
+        particles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: Math.random() * 300 + 200,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+            c: Math.random() > 0.5 ? '#0ea5e9' : '#6366f1'
+        });
     }
-    draw() {
+}
+
+function draw() {
+    ctx.clearRect(0, 0, w, h);
+    particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -p.r) p.x = w + p.r;
+        if (p.x > w + p.r) p.x = -p.r;
+        if (p.y < -p.r) p.y = h + p.r;
+        if (p.y > h + p.r) p.y = -p.r;
+
+        let g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+        g.addColorStop(0, p.c + '15');
+        g.addColorStop(1, 'transparent');
+        ctx.fillStyle = g;
         ctx.beginPath();
-        let grad = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        grad.addColorStop(0, this.color + '33');
-        grad.addColorStop(1, 'transparent');
-        ctx.fillStyle = grad;
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
         ctx.fill();
-    }
-    update() {
-        // Sigue al mouse sutilmente
-        let dx = mouseX - this.x;
-        let dy = mouseY - this.y;
-        this.x += dx * this.speed;
-        this.y += dy * this.speed;
-    }
+    });
+    requestAnimationFrame(draw);
 }
 
-for(let i=0; i<6; i++) blobs.push(new Blob());
-
-function animate() {
-    ctx.clearRect(0,0, width, height);
-    blobs.forEach(b => { b.update(); b.draw(); });
-    requestAnimationFrame(animate);
+// --- RELOJ EN TIEMPO REAL ---
+function updateTime() {
+    const timeEl = document.getElementById('local-time');
+    const now = new Date();
+    timeEl.textContent = now.toLocaleTimeString('es-ES', { hour12: false });
 }
-animate();
 
-// Reveal Logic
+// --- REVELADO EN SCROLL ---
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('active'); });
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('active');
+    });
 }, { threshold: 0.1 });
+
+// --- INICIALIZACIÓN ---
+window.addEventListener('resize', initCanvas);
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+initCanvas();
+draw();
+setInterval(updateTime, 1000);
+updateTime();
